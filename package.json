@@ -1,0 +1,19 @@
+{
+  "name": "excersism",
+  "version": "1.0.0",
+  "description": "Exercises from excersism.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YaroslavUsheta/excersism.git"
+  },
+  "author": "Yaroslav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YaroslavUsheta/excersism/issues"
+  },
+  "homepage": "https://github.com/YaroslavUsheta/excersism#readme"
+}
