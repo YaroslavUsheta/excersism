@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/YaroslavUsheta/excersism/issues"
   },
-  "homepage": "https://github.com/YaroslavUsheta/excersism#readme"
+  "homepage": "https://github.com/YaroslavUsheta/excersism#readme",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
 }
