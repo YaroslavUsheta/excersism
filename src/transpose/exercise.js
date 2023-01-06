@@ -3,7 +3,7 @@
 // convenience to get you started writing code faster.
 //
 
-const transpose = (input) => {
+function transpose(input) {
   // It satisfies the case if input = []
   if (input.length === 0) {
     return input;
@@ -19,4 +19,5 @@ const transpose = (input) => {
   const output = input[0].split("");
   return output;
 };
+
 module.exports = transpose;
