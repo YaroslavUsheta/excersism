@@ -1,6 +1,21 @@
-const transpose = require("./exercise");
+const { transpose, isSingleColumn } = require("./exercise");
 
 describe("Transpose", () => {
+  test("isSingleColumn returns true for [A, B]", () => {
+    expect(isSingleColumn(["A", "B"])).toBeTruthy();
+  });
+  test("isSingleColumn return true for [A, B, C]", () => {
+    expect(isSingleColumn(["A", "B", "C"])).toBeTruthy();
+  });
+  test("isSingleColumn return false for [AB, CD]", () => {
+    expect(isSingleColumn(["AB", "CD"])).toBeFalsy();
+  });
+  test("isSingleColumn returns false for [string, number] because it's not a valid matrix (we have number in it)", () => {
+    expect(isSingleColumn(["A", 10])).toBeFalsy();
+  });
+  test("isSingleColumn returns false for number (not a valid matrix)", () => {
+    expect(isSingleColumn(25)).toBeFalsy();
+  });
   test("empty matrix", () => {
     expect(transpose([])).toEqual([]);
   });

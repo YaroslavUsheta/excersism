@@ -13,8 +13,34 @@ function transposeRow(input) {
   return output;
 }
 
+function isString(x) {
+  return typeof x === "string";
+}
+
+function hasSingleCharacter(x) {
+  return x.length === 1;
+}
+
+/**
+ * Return true if the input represents a single column.
+ *
+ * @example
+ *
+ * ['A', 'B', 'C', 'D'] // is a single column
+ *
+ * ['AB', '12'] // is not a single column
+ *
+ * @param input
+ * @returns {boolean}
+ */
 function isSingleColumn(input) {
-  return input.length === 2;
+  const isArray = Array.isArray(input);
+  if (isArray) {
+    const everyItemIsAString = input.every(arrayItem => isString(arrayItem));
+    const everyStringHasASingleCharacter = input.every(arrayItem => hasSingleCharacter(arrayItem));
+    return isArray && everyItemIsAString && everyStringHasASingleCharacter;
+  }
+  return false;
 }
 
 function transpose(input) {
@@ -32,4 +58,4 @@ function transpose(input) {
   return transposeRow(input);
 }
 
-module.exports = transpose;
+module.exports = { transpose, isSingleColumn };
