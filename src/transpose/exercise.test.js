@@ -4,12 +4,15 @@ describe("Transpose", () => {
   test("isSingleColumn returns true for [A, B]", () => {
     expect(isSingleColumn(["A", "B"])).toBeTruthy();
   });
-  test("isSingleColumn return true for [A, B, C]", () => {
+  test("isSingleColumn return  for [A, B, C]", () => {
     expect(isSingleColumn(["A", "B", "C"])).toBeTruthy();
   });
   test("isSingleColumn return false for [AB, CD]", () => {
     expect(isSingleColumn(["AB", "CD"])).toBeFalsy();
   });
+  test("isSingleColumn return false for [AB, CD]", () => {
+    expect(isSingleColumn(["AB", "CD"])).toBeFalsy();
+  });  
   test("isSingleColumn returns false for [string, number] because it's not a valid matrix (we have number in it)", () => {
     expect(isSingleColumn(["A", 10])).toBeFalsy();
   });
@@ -31,3 +34,4 @@ describe("Transpose", () => {
     expect(transpose(input)).toEqual(expected);
   });
 });
+)
