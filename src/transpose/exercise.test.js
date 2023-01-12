@@ -34,4 +34,3 @@ describe("Transpose", () => {
     expect(transpose(input)).toEqual(expected);
   });
 });
-)
